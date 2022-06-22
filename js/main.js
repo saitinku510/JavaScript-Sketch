@@ -342,6 +342,21 @@
 // });
 
 
+//// Getting values in the console
+// const myForm = document.querySelector("#my-form");
+// const name = document.querySelector("#name");
+// const email = document.querySelector("#email");
+// const msg = document.querySelector(".msg");
+// const user = document.querySelector("#users");
+// myForm.addEventListener('submit', onSubmit);
+// function onSubmit(e) {
+//     e.preventDefault();
+//     console.log(name.value);
+//     console.log(email.value);
+// }
+
+
+//Validatoin of form
 const myForm = document.querySelector("#my-form");
 const name = document.querySelector("#name");
 const email = document.querySelector("#email");
@@ -350,6 +365,14 @@ const user = document.querySelector("#users");
 myForm.addEventListener('submit', onSubmit);
 function onSubmit(e) {
     e.preventDefault();
-    console.log(name.value);
-    console.log(email.value);
+    if(name.value === '' || email.value === ''){
+        // alert('please enter details');
+        msg.classList.add('error');
+        msg.innerHTML = "please enter all the fields";
+
+        setTimeout(() => msg.remove(), 2000);
+    } else {
+        console.log('success')
+        // console.log(name.value, email.value);
+    }
 }
