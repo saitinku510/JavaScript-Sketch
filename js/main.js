@@ -164,13 +164,32 @@
 // }
 
 //comparing two statements using &&, ||
-const x = 5;
-const y = 10;
-// using And both should be true to execute
-if(x > 3 && y > 1) {
-    console.log('x is more than 5 OR y is more than 10');
-} 
-//using or anyone should be true so it executes
-if(x > 5 || y > 10) {
-    console.log('x is more than 5 OR y is more than 10');
-} 
+// const x = 5;
+// const y = 10;
+// // using And both should be true to execute
+// if(x > 3 && y > 1) {
+//     console.log('x is more than 5 OR y is more than 10');
+// } 
+// //using or anyone should be true so it executes
+// if(x > 5 || y > 10) {
+//     console.log('x is more than 5 OR y is more than 10');
+// } 
+
+//Ternary Operation (?) this can use both if and else statement in single line
+const x = 11;
+const color = x > 10 ? 'red' : 'blue';
+console.log(color);
+
+//Switch function
+const colorChange = 'blue';
+switch(colorChange) {
+    case 'red':
+        console.log('color is red');
+        break ;
+    case 'blue':
+        console.log('color is blue');
+        break;
+    default:
+        console.log('color is neither Red nor Blue');
+        break;
+}
