@@ -146,5 +146,7 @@ const todos = [ //this is array
 const todoCompleted = todos.filter(function(todo) {
     // return todo.id === 2; 
     return todo.isCompleted === true; 
+}).map(function(todo){
+    return todo.text;
 });
 console.log(todoCompleted);
