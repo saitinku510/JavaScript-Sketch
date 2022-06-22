@@ -296,6 +296,15 @@
 // console.log(document.getElementsByClassName("item"));
 // console.log(document.getElementsByTagName("li"));
 
-//QuearySelectorAll to get data
-const item = document.querySelectorAll(".item");
-item.forEach((items) => console.log(items));
+// //QuearySelectorAll to get data
+// const item = document.querySelectorAll(".item");
+// item.forEach((items) => console.log(items));
+
+
+const ul = document.querySelector('.items');
+// ul.remove(); //this will delete the whole list
+// ul.lastElementChild.remove(); //this will delete the last element in list
+// ul.firstElementChild.remove(); //this will delete the first element in list
+ul.firstElementChild.textContent = 'hey'; //this changes the text of li
+ul.children[1].textContent = 'hello';  //this changes the text of 2nd li
+ul.lastElementChild.innerHTML = '<h2>Hey Sup</h2>'; //this changes the li into h2 tag
