@@ -301,10 +301,28 @@
 // item.forEach((items) => console.log(items));
 
 
-const ul = document.querySelector('.items');
-// ul.remove(); //this will delete the whole list
-// ul.lastElementChild.remove(); //this will delete the last element in list
-// ul.firstElementChild.remove(); //this will delete the first element in list
-ul.firstElementChild.textContent = 'hey'; //this changes the text of li
-ul.children[1].textContent = 'hello';  //this changes the text of 2nd li
-ul.lastElementChild.innerHTML = '<h2>Hey Sup</h2>'; //this changes the li into h2 tag
+//Queary selector for lists and changing content
+// const ul = document.querySelector('.items');
+// // ul.remove(); //this will delete the whole list
+// // ul.lastElementChild.remove(); //this will delete the last element in list
+// // ul.firstElementChild.remove(); //this will delete the first element in list
+// ul.firstElementChild.textContent = 'hey'; //this changes the text of li
+// ul.children[1].textContent = 'hello';  //this changes the text of 2nd li
+// ul.lastElementChild.innerHTML = '<h2>Hey Sup</h2>'; //this changes the li into h2 tag
+
+
+// //Styling using Javascript
+// const btn = document.querySelector('.btn');
+// btn.style.background= 'red';
+
+
+const btn = document.querySelector('.btn');
+btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log(e);
+    console.log(e.target); //It shows the btn element in the console
+    console.log(e.target.className); //It shows the class name for input btn element in consle
+    document.querySelector('#my-form').style.background = "grey"; //changes the bg color on click
+    // document.querySelector('body').classList.add('bg-dark');
+    document.querySelector('.items').lastElementChild.innerHTML = "<h1>Hey supy </h1>";
+});
