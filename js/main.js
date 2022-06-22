@@ -279,6 +279,20 @@
 // console.log(person1);
 // console.log(person2.getBirthYear());
 
-// Window also can be used
-console.log(window);
-window.alert("hello");
+// // Window also can be used
+// console.log(window);
+// window.alert("hello");
+
+// Single Element this is to select only one element
+console.log(document.getElementById("my-form"));
+console.log(document.querySelector("h1"));
+// Other way to call same thing
+const form = document.getElementById('my-form');
+console.log(form);
+
+
+// Multiple Element this is to select multiple elements
+console.log(document.querySelectorAll(".item")); //this is better in all
+console.log(document.getElementsByClassName("item"));
+console.log(document.getElementsByTagName("li"));
+
