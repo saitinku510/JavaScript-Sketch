@@ -257,24 +257,28 @@
 // console.log(person2.getAllDetails());
 
 
-// Class Function
-class person {
-    constructor(firstName, lastName, dob) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.dob = new Date(dob);
-    }
+// // Class Function
+// class person {
+//     constructor(firstName, lastName, dob) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.dob = new Date(dob);
+//     }
 
-    getBirthYear() {
-        return this.dob.getFullYear();
-    }
+//     getBirthYear() {
+//         return this.dob.getFullYear();
+//     }
 
-    getFullName() {
-        return `${this.firstName} ${this.lastName}`;
-    }
-}
-const person1 = new person('babu', 'marri', '8-18-1998');
-const person2 = new person('tony', 'v', '1-19-1999');
+//     getFullName() {
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+// }
+// const person1 = new person('babu', 'marri', '8-18-1998');
+// const person2 = new person('tony', 'v', '1-19-1999');
 
-console.log(person1);
-console.log(person2.getBirthYear());
+// console.log(person1);
+// console.log(person2.getBirthYear());
+
+// Window also can be used
+console.log(window);
+window.alert("hello");
