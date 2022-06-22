@@ -109,44 +109,68 @@
 // }
 
 //For Each, map, filter
-const todos = [ //this is array
-    { // this is object
-        id : 1,
-        text : 'Text out trash',
-        isCompleted : true
-    },
-    { // this is object
-        id : 2,
-        text : 'meet in trash',
-        isCompleted : false
-    },
-    { // this is object
-        id : 3,
-        text : 'appointment for me',
-        isCompleted : true
-    },
-    { // this is object
-        id : 4,
-        text : 'appointment for me to other',
-        isCompleted : false
-    }
-];
-// // For each function
-// todos.forEach(function(todo) {
-//     console.log(todo.isCompleted);
-// });
+// const todos = [ //this is array
+//     { // this is object
+//         id : 1,
+//         text : 'Text out trash',
+//         isCompleted : true
+//     },
+//     { // this is object
+//         id : 2,
+//         text : 'meet in trash',
+//         isCompleted : false
+//     },
+//     { // this is object
+//         id : 3,
+//         text : 'appointment for me',
+//         isCompleted : true
+//     },
+//     { // this is object
+//         id : 4,
+//         text : 'appointment for me to other',
+//         isCompleted : false
+//     }
+// ];
+// // // For each function
+// // todos.forEach(function(todo) {
+// //     console.log(todo.isCompleted);
+// // });
 
-// // Map is to get  the full data
-// const todoText = todos.map(function(todo) {
+// // // Map is to get  the full data
+// // const todoText = todos.map(function(todo) {
+// //     return todo.text;
+// // });
+// // console.log(todoText);
+
+// // Filter is to filter out
+// const todoCompleted = todos.filter(function(todo) {
+//     // return todo.id === 2; 
+//     return todo.isCompleted === true; 
+// }).map(function(todo){
 //     return todo.text;
 // });
-// console.log(todoText);
+// console.log(todoCompleted);
 
-// Filter is to filter out
-const todoCompleted = todos.filter(function(todo) {
-    // return todo.id === 2; 
-    return todo.isCompleted === true; 
-}).map(function(todo){
-    return todo.text;
-});
-console.log(todoCompleted);
+
+// Comparision using if, else, else if.
+//// comparing only one variable
+// const x = 11; 
+// if(x === 10) {
+//     console.log('x is 10');
+// } else if(x > 10) {
+//     console.log('x is greater than 10');
+// }else {
+//     console.log('x is less than 10')
+// }
+
+//comparing two statements using &&, ||
+const x = 5;
+const y = 10;
+// using And both should be true to execute
+if(x > 3 && y > 1) {
+    console.log('x is more than 5 OR y is more than 10');
+} 
+//using or anyone should be true so it executes
+if(x > 5 || y > 10) {
+    console.log('x is more than 5 OR y is more than 10');
+} 
