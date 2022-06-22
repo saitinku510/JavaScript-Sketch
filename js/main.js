@@ -329,14 +329,27 @@
 // });
 
 
-//Onmouse hover events
-const btn = document.querySelector('.btn');
-btn.addEventListener('mouseover', (e) => {
+// //Onmouse hover events
+// const btn = document.querySelector('.btn');
+// btn.addEventListener('mouseover', (e) => {
+//     e.preventDefault();
+//     console.log(e);
+//     console.log(e.target); //It shows the btn element in the console
+//     console.log(e.target.className); //It shows the class name for input btn element in consle
+//     document.querySelector('#my-form').style.background = "grey"; //changes the bg color on click
+//     // document.querySelector('body').classList.add('bg-dark');
+//     document.querySelector('.items').lastElementChild.innerHTML = "<h1>Hey supy </h1>";
+// });
+
+
+const myForm = document.querySelector("#my-form");
+const name = document.querySelector("#name");
+const email = document.querySelector("#email");
+const msg = document.querySelector(".msg");
+const user = document.querySelector("#users");
+myForm.addEventListener('submit', onSubmit);
+function onSubmit(e) {
     e.preventDefault();
-    console.log(e);
-    console.log(e.target); //It shows the btn element in the console
-    console.log(e.target.className); //It shows the class name for input btn element in consle
-    document.querySelector('#my-form').style.background = "grey"; //changes the bg color on click
-    // document.querySelector('body').classList.add('bg-dark');
-    document.querySelector('.items').lastElementChild.innerHTML = "<h1>Hey supy </h1>";
-});
+    console.log(name.value);
+    console.log(email.value);
+}
