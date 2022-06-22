@@ -107,3 +107,44 @@
 //     console.log(`While loop number: ${i}`);
 //     i++;
 // }
+
+//For Each, map, filter
+const todos = [ //this is array
+    { // this is object
+        id : 1,
+        text : 'Text out trash',
+        isCompleted : true
+    },
+    { // this is object
+        id : 2,
+        text : 'meet in trash',
+        isCompleted : false
+    },
+    { // this is object
+        id : 3,
+        text : 'appointment for me',
+        isCompleted : true
+    },
+    { // this is object
+        id : 4,
+        text : 'appointment for me to other',
+        isCompleted : false
+    }
+];
+// // For each function
+// todos.forEach(function(todo) {
+//     console.log(todo.isCompleted);
+// });
+
+// // Map is to get  the full data
+// const todoText = todos.map(function(todo) {
+//     return todo.text;
+// });
+// console.log(todoText);
+
+// Filter is to filter out
+const todoCompleted = todos.filter(function(todo) {
+    // return todo.id === 2; 
+    return todo.isCompleted === true; 
+});
+console.log(todoCompleted);
