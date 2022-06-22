@@ -356,7 +356,30 @@
 // }
 
 
-//Validatoin of form
+// //Validatoin of form
+// const myForm = document.querySelector("#my-form");
+// const name = document.querySelector("#name");
+// const email = document.querySelector("#email");
+// const msg = document.querySelector(".msg");
+// const user = document.querySelector("#users");
+// myForm.addEventListener('submit', onSubmit);
+// function onSubmit(e) {
+//     e.preventDefault();
+//     if(name.value === '' || email.value === ''){
+//         // alert('please enter details');
+//         msg.classList.add('error');
+//         msg.innerHTML = "please enter all the fields";
+
+//         setTimeout(() => msg.remove(), 2000);
+//     } else {
+//         console.log('success')
+//         // console.log(name.value, email.value);
+//     }
+// }
+
+
+
+//
 const myForm = document.querySelector("#my-form");
 const name = document.querySelector("#name");
 const email = document.querySelector("#email");
@@ -372,7 +395,12 @@ function onSubmit(e) {
 
         setTimeout(() => msg.remove(), 2000);
     } else {
-        console.log('success')
-        // console.log(name.value, email.value);
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(`${name.value} : ${email.value}`));
+        user.appendChild(li);
+
+        //Now clear the fields
+        name.value = '';
+        email.value = '';
     }
 }
