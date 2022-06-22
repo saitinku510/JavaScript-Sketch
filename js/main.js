@@ -195,27 +195,63 @@
 // }
 
 
-//Functions
-function addNumberss(n1 = 2, n2 = 4) {
-    console.log(n1 + n2);
-}
-addNumberss(4, 6);
+// //Functions
+// function addNumberss(n1 = 2, n2 = 4) {
+//     console.log(n1 + n2);
+// }
+// addNumberss(4, 6);
 
-// Arrow Function
-const addNumbers = (n1 = 2, n2 = 4) => {
-    console.log(n1 + n2);
-}
-addNumbers(7, 6);
-// Function can also be written as
-const addNumbersO = (n1 = 2, n2 = 4) => {
-    return n1 + n2;
-}
-console.log(addNumbersO(7, 6));
+// // Arrow Function
+// const addNumbers = (n1 = 2, n2 = 4) => {
+//     console.log(n1 + n2);
+// }
+// addNumbers(7, 6);
+// // Function can also be written as
+// const addNumbersO = (n1 = 2, n2 = 4) => {
+//     return n1 + n2;
+// }
+// console.log(addNumbersO(7, 6));
 
-// One more way for arrow function
-const addNumbers1 = (n1 = 2, n2 = 4) => n1 + n2;
-console.log(addNumbers1(99, 6));
+// // One more way for arrow function
+// const addNumbers1 = (n1 = 2, n2 = 4) => n1 + n2;
+// console.log(addNumbers1(99, 6));
 
-// One other way for arrow function
-const addNumbers2 = n1 => n1 + 100;
-console.log(addNumbers2(99));
+// // One other way for arrow function
+// const addNumbers2 = n1 => n1 + 100;
+// console.log(addNumbers2(99));
+
+
+//Constructor function
+// function person(firstName, lastname, Dob) {
+//     this.firstName = firstName;
+//     this.lastname = lastname;
+//     this.Dob = new Date(Dob);
+// }
+// //instantiate bject
+// const person1 = new person('babu', 'marri', '8-18-1998');
+// const person2 = new person('tony', 'v', '1-19-1999');
+
+// Get details in Function in otherway
+function person(firstName, lastname, Dob) {
+    this.firstName = firstName;
+    this.lastname = lastname;
+    this.Dob = new Date(Dob);
+    this.getBirthYear = function() {
+        return this.Dob.getFullYear();
+    }
+    this.getFullName = function() {
+        return `${this.firstName} ${this.lastname}`;
+    }
+    this.getAllDetails = function() {
+        return ` Name is ${this.firstName} ${this.lastname}, Date of birth is ${this.Dob}`;
+    }
+}
+//instantiate bject
+const person1 = new person('babu', 'marri', '8-18-1998');
+const person2 = new person('tony', 'v', '1-19-1999');
+
+console.log(person1);
+// console.log(person2.firstName, person2.Dob.getFullYear());
+// console.log(person2.getBirthYear());
+// console.log(person2.getFullName());
+// console.log(person2.getAllDetails());
