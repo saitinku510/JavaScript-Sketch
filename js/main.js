@@ -67,23 +67,23 @@
 // console.log(person.firstName, person.lastName, person.hobbies[0], person.address.city); //this is to call specific details
 
 //Array & object in array & Json
-const todos = [ //this is array
-    { // this is object
-        id : 1,
-        text : 'Text out trash',
-        isCompleted : true
-    },
-    { // this is object
-        id : 2,
-        text : 'meet in trash',
-        isCompleted : false
-    },
-    { // this is object
-        id : 3,
-        text : 'appointment for me',
-        isCompleted : true
-    }
-];
+// const todos = [ //this is array
+//     { // this is object
+//         id : 1,
+//         text : 'Text out trash',
+//         isCompleted : true
+//     },
+//     { // this is object
+//         id : 2,
+//         text : 'meet in trash',
+//         isCompleted : false
+//     },
+//     { // this is object
+//         id : 3,
+//         text : 'appointment for me',
+//         isCompleted : true
+//     }
+// ];
 // console.log(todos[2].text);
 // const todoJson = JSON.stringify(todos);
 // console.log(todoJson);
@@ -97,9 +97,9 @@ const todos = [ //this is array
 //     // console.log(`For loop Number: ${i}`);
 //     console.log(todos[i].text);
 // }
-for(let todo of todos) {
-    console.log(todo.text);
-}
+// for(let todo of todos) {
+//     console.log(todo.text);
+// }
 
 // While Loop
 // let i = 0;
