@@ -227,31 +227,54 @@
 //     this.lastname = lastname;
 //     this.Dob = new Date(Dob);
 // }
+// //instantiate object
+// const person1 = new person('babu', 'marri', '8-18-1998');
+// const person2 = new person('tony', 'v', '1-19-1999');
+
+// // Get details in Function in otherway
+// function person(firstName, lastname, Dob) {
+//     this.firstName = firstName;
+//     this.lastname = lastname;
+//     this.Dob = new Date(Dob);
+//     this.getBirthYear = function() {
+//         return this.Dob.getFullYear();
+//     }
+//     this.getFullName = function() {
+//         return `${this.firstName} ${this.lastname}`;
+//     }
+//     this.getAllDetails = function() {
+//         return ` Name is ${this.firstName} ${this.lastname}, Date of birth is ${this.Dob}`;
+//     }
+// }
 // //instantiate bject
 // const person1 = new person('babu', 'marri', '8-18-1998');
 // const person2 = new person('tony', 'v', '1-19-1999');
 
-// Get details in Function in otherway
-function person(firstName, lastname, Dob) {
-    this.firstName = firstName;
-    this.lastname = lastname;
-    this.Dob = new Date(Dob);
-    this.getBirthYear = function() {
-        return this.Dob.getFullYear();
-    }
-    this.getFullName = function() {
-        return `${this.firstName} ${this.lastname}`;
-    }
-    this.getAllDetails = function() {
-        return ` Name is ${this.firstName} ${this.lastname}, Date of birth is ${this.Dob}`;
-    }
-}
-//instantiate bject
-const person1 = new person('babu', 'marri', '8-18-1998');
-const person2 = new person('tony', 'v', '1-19-1999');
-
-console.log(person1);
+// console.log(person1);
 // console.log(person2.firstName, person2.Dob.getFullYear());
 // console.log(person2.getBirthYear());
 // console.log(person2.getFullName());
 // console.log(person2.getAllDetails());
+
+
+// Class Function
+class person {
+    constructor(firstName, lastName, dob) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = new Date(dob);
+    }
+
+    getBirthYear() {
+        return this.dob.getFullYear();
+    }
+
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+const person1 = new person('babu', 'marri', '8-18-1998');
+const person2 = new person('tony', 'v', '1-19-1999');
+
+console.log(person1);
+console.log(person2.getBirthYear());
