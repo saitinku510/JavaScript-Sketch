@@ -316,8 +316,22 @@
 // btn.style.background= 'red';
 
 
+// //onclick events using query selector
+// const btn = document.querySelector('.btn');
+// btn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     console.log(e);
+//     console.log(e.target); //It shows the btn element in the console
+//     console.log(e.target.className); //It shows the class name for input btn element in consle
+//     document.querySelector('#my-form').style.background = "grey"; //changes the bg color on click
+//     // document.querySelector('body').classList.add('bg-dark');
+//     document.querySelector('.items').lastElementChild.innerHTML = "<h1>Hey supy </h1>";
+// });
+
+
+//Onmouse hover events
 const btn = document.querySelector('.btn');
-btn.addEventListener('click', (e) => {
+btn.addEventListener('mouseover', (e) => {
     e.preventDefault();
     console.log(e);
     console.log(e.target); //It shows the btn element in the console
